@@ -1,0 +1,16 @@
+[project]
+name = "pmdr"
+version = "0.1.0"
+dynamic = ["version"]
+# This comes from the `type` alias statements
+# and from the `playsound3` module.
+requires-python = ">= 3.12"
+
+[project.optional-dependencies]
+alarm = ["playsound3"]
+
+[project.scripts]
+pmdr = "pmdr.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/thatcosmicstorm/pmdr"
