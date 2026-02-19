@@ -1,6 +1,6 @@
 [project]
 name = "pmdr"
-dynamic = ["version"]
+version = "0.1.0"
 # This comes from the `type` alias statements
 # and from the `playsound3` module.
 requires-python = ">= 3.12"
