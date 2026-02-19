@@ -1,6 +1,5 @@
 [project]
 name = "pmdr"
-version = "0.1.0"
 dynamic = ["version"]
 # This comes from the `type` alias statements
 # and from the `playsound3` module.
