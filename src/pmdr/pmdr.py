@@ -189,13 +189,13 @@ DEFAULT_FOCUS_SEC: Second = 1500
 
 def _focus_minutes_input() -> None:
     while True:
-        focus_minutes: str = _uinput()
+        uinput: str = _uinput()
         if _self.debug:
             break
-        if not focus_minutes.isnumeric():
+        if not uinput.isnumeric():
             _error_box('Input a positive integer, like "15" or "20".')
             continue
-        focus_minutes: int = int(focus_minutes)
+        focus_minutes: int = int(uinput)
         if focus_minutes == 0:
             _error_box("Input a value greater than zero.")
             continue
