@@ -126,7 +126,7 @@ def _y_or_n_match(init_input: str) -> bool:
 
 
 def _exit_pmdr() -> NoReturn:
-    print("\033[H" + "\033[2J", end="")
+    print("\033[H" + "\033[2J")
     sys.exit("Successfully exited pmdr.")
 
 
@@ -290,7 +290,7 @@ def _statistics() -> None:
     print(f"And you spent {bfc} over {_self.break_sessions} break{bs}.\n")
 
 
-def main() -> None:
+def main() -> NoReturn:
     """*Run `pmdr`*."""
     _pprint(
         "Welcome to pmdr!",
@@ -308,8 +308,7 @@ def main() -> None:
             break
     if _self.statistics_completed:
         _statistics()
-    print("Press ENTER to exit pmdr.")
-    input()
+    _exit_pmdr()
 
 
 if __name__ == "__main__":
